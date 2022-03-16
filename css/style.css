@@ -1,0 +1,306 @@
+:root{ /* valor que se re utiliza */
+    --primario: #9C27B0;
+    --primarioOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233,187,2);
+    --blanco: #FFF;
+    --negro: #000;
+
+
+    --fuentePrincipal: 'Staatliches', cursive; /* fuente de la letra */
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem es = 10px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+body {
+    background-color: var(--primario); /* color de fondo de la pagina porque esta dentro del body */
+    font-size: 1.6rem; /* este es el tamaño de la letra */
+    line-height: 1.5; /* interlienado de la fuente osea del (font-size:1.6rem) */
+}
+
+p{
+    font-size: 1.8rem; /* Tamaño de la letra para todos los parrafos (p) */
+    font-family: Arial, Helvetica, sans-serif; /* todos los parrafos (p) van a usar la fuente de arial o la que se vaya a usar */
+    color: var(--blanco); /* todo el texto de parrafo (p) va a tener color blanco */
+}
+
+a{
+    text-decoration: none; /* los enlaces no van a tener el interlineado */
+}
+img{
+    width: 100%; /* especifica la anchura del area de contenido de la imagen o un contenido */
+}
+
+.contenedor{
+    max-width: 120rem; /* coloca el maximo ancho a un elemento, ademas impide que el valor de width sea mas largo que el valor especificado en max-width */
+    margin: 0 auto; /* centra el contenido de manera horizontal */
+}
+
+
+
+h1,h2,h3{ /*selecciona todos los headings */
+    text-align: center; /* el texto va a estar centrado */
+    color: var(--secundario); /* todo el texto va a tener el color definido */
+    font-family: var(--fuentePrincipal); /*todo el texto va a tener la fuente definida */
+}
+
+h1{
+    font-size: 4rem; /* tamaño de letra para heading h1 */
+}
+
+
+h2{
+    font-size: 3.2rem; /* tamaño de letra para heading h2 */
+}
+
+
+h3{
+    font-size: 2.4rem; /* tamaño de letra para heading h3 */
+}
+
+/* header */
+
+.header{ /* clase que creamos en el html */
+    display:flex;
+    justify-content: center; /* centrar horizontalmente */
+
+}
+
+.header__logo{
+    margin: 3rem 0; /* para poner un espacio entre el titulo y la patde de arriba (3rem arriba y abajo)(0 derecha e isquierda */
+}
+
+/* Footer */
+.footer{
+    background-color: var(--primarioOscuro); /* color de fondo */
+    padding: 1rem 0; /* el ancho del contenedor */
+    margin-top: 2rem; /* la separacion con lo de arriba por el (top) */
+}
+
+.footer__texto{
+    text-align: center; /* para que este centrado */
+    font-family: var(--fuentePrincipal); /*tipo de letra */
+    font-size: 2.2rem; /*tamaño de la letra */
+}
+
+
+
+/* navegacion */
+
+.navegacion{
+    background-color: var(--primarioOscuro); /* color de fondo */
+    padding: 1rem 0; /* hace un poco mas grande la barra de navegacion */
+    display: flex; 
+    justify-content: center;/* centrar horizontalmente */
+    gap: 2rem; /* separa los elementos en 2rem o 20 pixeles (FORMA NUEVA)*/
+
+}
+
+.navegacion__enlace{
+    font-family: var(--fuentePrincipal); /* tipo de letra que vamos a usar */
+    color: var(--blanco); /* color de la letra */
+    font-size: 3rem; /* tamaño de la letra */
+    /*margin-right: 2rem;  (hace lo mismo que gap pero como gap es muy nuevo se puede usar este)(FORMA ANTERIOR CON) */
+}
+
+/* .navegacion__enlace:last-of-type{  (va a seleccionar el ultimo elemento de tipo enlace) (FORMA ANTERIOR DOS JUNTAS)
+    margin-right: 0;
+} 
+*/
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    color: var(--secundario); /* cuando se pone el cursor arriba se cambia de color */
+}
+
+/*grid */
+
+.grid{
+    display: grid; /* proporciona una cuadrícula de una sola columna, por lo que tus elementos continúan mostrándose uno debajo del otro*/ 
+    grid-template-columns: repeat(2, 1fr); /* filas de dos elementos */
+    gap: 2rem; /* separar las imagenes */
+    }
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr); /* dependiendo del tamaño del dispositivo la pagina va a cabmair el numero de imagenes por fila */
+    }
+    
+}
+
+
+/* productos */
+
+.producto{
+    background-color: var(--primarioOscuro); /* ponerle fondo a todos los elementos */
+    padding: 1rem; /*  crea espacio extra dentro de un elemento */
+
+}
+
+ /*.producto__imagen {
+    width: 100%; /* usar el 100% del espacio disponible dentro del div 
+}*/
+
+.producto__nombre{
+   font-size: 4rem; /* tamaño de la letra */
+}
+
+.producto__precio{
+    font-size: 2.8rem;
+    color: var(--secundario);
+
+
+}
+
+.producto__nombre,
+.producto__precio{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* graficos */
+
+.grafico{
+    min-height: 30rem; /* definor su altura minima */
+    background-repeat: no-repeat; /* para que no se repita la imagen */
+    background-size: cover; /* para que ocupe todo el espacio disponible */
+    grid-column: 1 / 3; /* seleccionar fila */
+}
+
+.grafico--camisas{
+    grid-row: 2 / 3 ; /* seleccionar fila */
+    background-image: url(../img/grafico1.jpg); /* (/.. se usa para salir de una carpeta y (/) para entrar a otra) */
+}
+
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8 / 9; /* seleccionar columna */
+}
+
+
+@media (min-width: 768px) { 
+    .grafico--node{
+        grid-row: 5 / 6 ; /* seleccionar fila */
+        grid-column: 2 / 4 ; /* seleccionar columna */
+    }
+    
+}
+
+/* nostros */
+
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2, auto); /* lo hace una cuadricula (2 partes, de 1 fraccion) (auto es para que tome el tamaño automaticamente y no de la fraccion  */
+}
+
+@media (min-width: 768px) {  /* cuando es menor a 768px de pone en fila */
+    .nosotros{
+        grid-template-columns: repeat(2, 1fr); 
+        column-gap: 2rem;
+    }
+}
+
+.nosotros__imagen{
+    grid-row: 1 / 2; /* para que la imagen se ponga sobre el texto */
+     /* width: 100%; /* para que la imagen tome todo el espacio disponible */
+}
+
+@media (min-width: 768px) { 
+    .nosotros__imagen{
+        grid-column: 2 / 3; /*cuando es menor de 768px toma la posicion de 2 a 3 (2 / 3) */
+    }
+}
+
+/*bloques */
+
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .bloques{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bloque{
+    text-align: center; /* texto en el centro */
+}
+
+/*.bloque__imagen{
+    width: 100%; /* tamaño de la imagen 
+} */
+
+.bloque__titulo{
+    margin: 0; /* margen entre titulo e imagen */
+}
+
+/* Pagina del producto*/
+
+@media (min-width: 768px) { 
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* tomar dos columnas de una mitad */
+    gap: 2rem; /* para agregar separacion */
+}
+
+.formulario__campo{
+    border: 1rem solid var(--primarioOscuro); /* 1. ancho de borde 2. tipo de borde 3. color de borde */
+    background-color: var(--primario); /* color de fondo de las casillas se puede poner (primario o transparent)*/
+    color: var(--blanco); /*color de la letra */
+    font-size: 2rem; /* tamaño de la letra */
+    font-family: Arial, Helvetica, sans-serif; /* fuente de la letra */
+    padding: 1rem; /* para que sea un poco mas grande el input */
+    /*appearance: none; (en caso de querer quitarle la flechita del lado) */
+    /*
+    border-color: var(--primarioOscuro); /* color del borde 
+    border-width: 1rem; /* tamaño del borde 
+    border-style: solid; /* para hacer una linea solida 
+    */    
+}
+
+
+.formulario__submit{
+    background-color: var(--secundario); /* color al boton */
+    border: none; /*sin bordes */
+    font-size: 2rem; /* tamaño de la letra */
+    font-family: var(--fuentePrincipal); /* tipo de letra */
+    padding: 2rem; /* establece el espacio de relleno requerido por todos los lados de un elemento */
+    transition: background-color .3s ease ; /* para que hace el efecto degradado en 0.3 segundos */
+    transition: font-size .3s ease ; /* para que crezca un poco en 0.3 segundos */
+    grid-column: 1 / 3;
+}
+
+.formulario__submit:hover{ /* para hacer que se ponga como opcion de boton */
+    font-size: 2.4rem;
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
+
+
+
+
+
+
+
+
+
+
+

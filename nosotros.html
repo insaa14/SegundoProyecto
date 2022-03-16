@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Store</title> <!-- titulo de la pestaña-->
+    <link rel="stylesheet" href="css/normalize.css"><!--enlaza la hoja de estilos-->
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"><!--fuente googlefonts-->
+    <link rel="stylesheet" href="css/style.css"><!--enlaza la normalizacion para la tipografia google-->
+
+
+</head>
+
+<body>
+    <header class="header "> <!-- define el bloque -->
+        <a href="index.html"> <!-- encabezado de la pagina -->
+            <img class=" header__logo  " src="img/logo.png" alt="Logotipo">  <!-- adjuntar imagen en el encabezado--> <!-- class=" header__logo es una divicion del bloque -->
+        </a>
+
+    </header>
+
+    <nav class=" navegacion "> <!-- crea botones para navegar por la pagina-->
+        <a class="navegacion__enlace" href="index.html">Tienda</a> <!--enlace para ir a la tienda-->
+        <a class="navegacion__enlace navegacion__enlace--activo" href="nosotros.html">Nosotros</a> <!-- enlace para conocerme-->
+    </nav>
+
+    <main class="contenedor"> <!-- contenido de la pagina principal -->
+        <h1>Nosotros</h1> <!-- texto principal que sale en la pagina-->
+
+        <div class="nosotros"> <!-- todo el conternido del apartado nosotros-->
+            <div class="nosotros__contenido"><!-- todo lo que es el contenido -->
+              <p>Duis libero elit, facilisis sit amet venenatis a, finibus ac metus.
+                Suspendisse potenti. Nulla ac euismod dui, vitae gravida arcu. 
+                Fusce cursus dolor quis congue aliquet. Aliquam nisi ipsum, 
+                dapibus luctus porta vel, facilisis condimentum augue. </p> 
+
+
+                <p>Nullam quis lobortis lacus. Suspendisse consectetur ultricies eros, 
+                at viverra lectus venenatis nec. Integer leo eros, hendrerit et tempor non, 
+                ultricies id mi.Donec non maximus tellus, non elementum urna. Proin ut porta quam, 
+                ac pretium eros. Nulla malesuada dui eget pulvinar rhoncus. Donec quis arcu condimentum, 
+                sodales enim non, lobortis justo. Praesent congue luctus dui eget euismod. Curabitur a lectus mauris.
+                Aliquam dapibus ac lacus at condimentum. Morbi accumsan nec justo eget faucibus. Vivamus orci felis, 
+                ullamcorper eget dolor vel,  </p>
+            </div>
+            <img class="nosotros__imagen" src="img/nosotros.jpg">
+        </div>
+    </main>
+
+    <section class="contenedor comprar">
+        <h2 class="comprar__titulo">¿por que comprar con nosotros?</h2>
+
+        <div class="bloques">
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_1.png" alt="porque comprar">
+                <h3 class="bloque__titulo">El Mejor Precio</h3>
+                <p>Nullam quis lobortis lacus. Suspendisse consectetur ultricies eros, 
+                    at viverra</p>
+            </div> <!--.bloque-->
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_2.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Para Devs</h3>
+                <p>Nullam quis lobortis lacus. Suspendisse consectetur ultricies eros, 
+                    at viverra</p>
+            </div> <!--.bloque-->
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_3.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Envio Gratis</h3>
+                <p>Nullam quis lobortis lacus. Suspendisse consectetur ultricies eros, 
+                    at viverra</p>
+            </div> <!--.bloque-->
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_4.png" alt="porque comprar">
+                <h3 class="bloque__titulo">La Mejor Calidad</h3>
+                <p>Nullam quis lobortis lacus. Suspendisse consectetur ultricies eros, 
+                    at viverra</p>
+            </div> <!--.bloque-->
+        </div><!--bloques-->
+    </section>
+
+    <footer class="footer">
+        <p class="footer__texto">Front End Store - Todos los derechos reservados 2022.</p>
+    </footer>
+    
+</body>
+
+</html>
